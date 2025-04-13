@@ -33,5 +33,21 @@ The NN is initially trained using TESS observations of 3 classes:
 
 This list of ojects used were taken from previous works using TESS data. The stellar TIC IDs and parameters are found in their individual text files uploaded here. 
 
-The TESS LC observations are found using the LightKurve (LK) search function, which finds each observation from TESS of that object from each sector it was osberved. We found the best sector of TESS observations for each object by _____, normalized the flux and phase folded the light curve using lcf.fold over the period to find an easily identifiable signal. Below shows the difference before and after the transformation using LK.
+The TESS LC observations are found using the LightKurve (LK) search function, which finds each observation from TESS of that object from each sector it was osberved. We found the best sector of TESS observations for each object by _____, normalized the flux and phase folded the light curve using lcf.fold over the period to find an easily identifiable signal. The observations were examined by eye for outlier data points and noisy observations, and were adjusted using a masking routine to clean up data around the signal. Below shows the LC before and after the transformation using LK and data cleaning.
 
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+II. Neural Network
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+II. MCMC Fit
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+II. Algorithm Accuracy
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+II. Conclusions
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
