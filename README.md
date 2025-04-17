@@ -1,5 +1,7 @@
 # Light Curve Classification Using ML
 This project was created for the purpose of the final project of Machine Learning in Geology 6932 for Spring 2025. This code uses a convolusional neural network to classify signals in Transitting Exoplanet Survey Satelite (TESS) light curves (LC) and provide best fit parameters using MCMC technique. 
+
+Created by Michael Bess and Zoe Yates
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 I. INTRODUCTION
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
