@@ -59,13 +59,13 @@ II. Convolusional Neural Network and Accuracy
 
 In order to train the model, we used the images of the plotted light curves for each class. We used a 2D Convolusional Neural Network (CNN), optimized to handle image files for training to attempt to classify LC signals into the two classes: eclipsing binaries and planets.  Our CNN contains three 2D convolusional layers and then two fully connected layers after flattening the images, passing through 26 epochs for accuracy convergence. We use the ReLu activation functions with a final output activation function of SoftMax due to our binary classification. The model is evaluated based on the accuracy of seperate validation data, to understand the performance of the CNN, and a confusion matrix was produced to examine how the model performed for each class. Figures 4 and 5 show the accuracy curve and the confusion matrix for the CNN. 
 
-                                                                                    ![image](https://github.com/user-attachments/assets/e255a035-bdba-4d47-b410-ba1f8c720f3d)
+![image](https://github.com/user-attachments/assets/e255a035-bdba-4d47-b410-ba1f8c720f3d)
 
-                                                                                      Figure 4: Accuracy curve for both the training and validation data over each epoch 
+Figure 4: Accuracy curve for both the training and validation data over each epoch 
 
-                                                                                    ![image](https://github.com/user-attachments/assets/a7971100-2892-4d7a-af8c-e9ea43439798)
+![image](https://github.com/user-attachments/assets/a7971100-2892-4d7a-af8c-e9ea43439798)
 
-                                                                                    Figure 5: Confusion matrix for the CNN, displaying the performance accuracy of each class
+Figure 5: Confusion matrix for the CNN, displaying the performance accuracy of each class
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 III. MCMC Fit for Planetary Signals
