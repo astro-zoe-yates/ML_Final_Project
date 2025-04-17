@@ -75,4 +75,12 @@ III. MCMC Fit for Planetary Signals
 II. Running the Code
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+The code is split up into two notebooks:
+  1. CNN_signal_classification.ipynb
+  2. MCMC.ipynb
+
+Due to the numpy version dependencies, these two tasks cannot be put into the same notebook. 
+
+The first notebook will run the CNN using either the data from the txt files provided on this GitHub Repository, or with the option of uploading your own training image files. The last cell in the notebook allows the user to input a TIC ID and it's orbital period in days. Once run, the code will retreive the TESS observations using LK, sigma clip them for noise reduction and contamination, and classify the image using the CNN model. The code will output a phase folded light curve plot, as well as the classification and confidence from the model. It will also save the TIC ID, period, time array, and flux array into a new txt file called 'object_paraneters.txt', to allow for easy integration into the MCMC notebook. If the classification is 'planet signal', the code will prompt you to upload the txt file to the MCMC notebook for further star/planet parameter calculation using BATMAN and MCMC fitting. 
+
 
