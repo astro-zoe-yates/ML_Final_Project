@@ -77,7 +77,7 @@ II. Running the Code
 
 The code is split up into two notebooks:
   1. CNN_signal_classification.ipynb
-  2. MCMC.ipynb
+  2. planet_MCMC.ipynb
 
 Due to the numpy version dependencies, these two tasks cannot be put into the same notebook. 
 
