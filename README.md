@@ -23,14 +23,17 @@ Package Dependencies:
   - Batman
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-II. Data 
+Some discussion about why this project is important 
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+II. Training Data 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The NN is initially trained using TESS observations of 2 classes: 
   1. Planetary Signal (Olmschenk et. al 2021)
   2. Binary Signal (Michael)
 
-This list of ojects used were taken from previous works using TESS data. The stellar TIC IDs and parameters are found in their individual text files uploaded here. 
+This list of ojects used were taken from previous works using TESS data. The stellar TIC IDs and parameters are found in their individual text files uploaded here. In order to avoid class imbalances, we used 175 objects for each class.  
 
 The TESS LC observations are found using the LightKurve (LK) search function, which finds each observation from TESS of that object from each sector it was osberved. We found the best sector of TESS observations for each object by a signal-to-noise threshold, normalized the flux, and phase folded the light curve using lcf.fold over the period to find an easily identifiable signal. The observations were cleaned for outlier data points and noisy observations, and were adjusted using a masking routine to clean up data around the signal. Below shows an example of a planetary signal and binary signal post cleaning: 
 
@@ -43,17 +46,21 @@ Figure 1: TESS Light curve for TIC ID 7548817 with known planetary signal after 
 
 Figure 2: TESS Light curve for TIC ID 372909935 with known binary signal after data cleaning processing
 
-
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 II. Neural Network
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+In order to train the NN, we used the images of the plotted light curves for each class. We used a 2D Convolusional Neural Network, optimized to handle image files for training. The NN contains 5 layers with the final 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-II. MCMC Fit
+II. Algorithm Accuracy
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-II. Algorithm Accuracy
+II. MCMC Fit for Planetary Signals
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+II. Running the Code
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
