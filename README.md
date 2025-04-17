@@ -54,7 +54,7 @@ Figure 2: TESS Light curve for TIC ID 7548817 with known planetary signal after 
 Figure 3: TESS Light curve for TIC ID 372909935 with known binary signal after data cleaning processing
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-II. Neural Network
+II. Convolusional Neural Network and Accuracy
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 In order to train the model, we used the images of the plotted light curves for each class. We used a 2D Convolusional Neural Network (CNN), optimized to handle image files for training to attempt to classify LC signals into the two classes: eclipsing binaries and planets.  Our CNN contains three 2D convolusional layers and then two fully connected layers after flattening the images, passing through 26 epochs for accuracy convergence. We use the ReLu activation functions with a final SoftMax activation function due to our binary classification. The model is evaluated based on the accuracy of seperate validation data, to understand the performance of the CNN, and a confusion matrix was produced to examine how the model performed for each class. Figures 4 and 5 show the accuracy curve and the confusion matrix for the CNN. 
@@ -68,12 +68,8 @@ Figure 4: Accuracy curve for both the training and validation data over each epo
 Figure 5: Confusion matrix for the CNN, displaying the performance accuracy of each class
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-II. CNN Accuracy
+III. MCMC Fit for Planetary Signals
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-II. MCMC Fit for Planetary Signals
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 II. Running the Code
