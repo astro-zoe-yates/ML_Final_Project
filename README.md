@@ -37,9 +37,11 @@ The TESS LC observations are found using the LightKurve (LK) search function, wh
 
 ![pl_curve_0](https://github.com/user-attachments/assets/5df38d15-860d-4035-bfaf-05ad848f50b2)
 
+Figure 1: TESS Light curve for TIC ID 7548817 with known planetary signal after data cleaning processing
+
 ![eb_curve_116](https://github.com/user-attachments/assets/dec3f821-001f-492c-a57e-6fabadf69593)
 
-
+Figure 2: TESS Light curve for TIC ID 372909935 with known binary signal after data cleaning processing
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
