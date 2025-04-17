@@ -23,7 +23,15 @@ Package Dependencies:
   - Batman
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Some discussion about why this project is important 
+Project Summary: 
+
+For this project, we proposed to use a Convolusional Neural Network (CNN) to identify and classify signals4 in stellar light curves taken by the Transiting Exoplanet Survey Satellite (TESS). Investigating unique signals in the light curve observations of stars is crucially important to key objectives within the field including the discovering Earth-like planets and developing our understanding of planetary systems like our own. Using Machinal Learning (ML) techniques to classify signals in our observations presents an efficient mechanism to finding exciting targets of interest for future observations, as well as provides context to how ML can be implemented into astronomical research. With this work, we will attempt to forge a new technique of analyzing light curves and calculate parameters of their respective1y planetary systems.
+
+Light curves are plots describing the flux or brightness of a star over a continuous period of time. They are popularly used to look for objects that would cause a star’s brightness to fluctuate including planet transits, binary star transits, stellar activity, and variable stars. Transits occur when an object, a companion star or transiting planet, passes in front of a star, causing a decrease in overall brightness. Figure 1 below shows an example of the shape of the two types of light curves: planetary signal and binary signal, however with noisy or unclean data, it can be difficult to identify and classify these signals, thus we employ a NN to aid in the classification of these signals. 
+
+<img width="583" alt="Screenshot 2025-04-17 at 12 32 14 PM" src="https://github.com/user-attachments/assets/d29da604-6e22-4dc2-b683-678fdc8cb27d" />
+
+Figure 1: TESS Light Curves with a model fit of the confirmed exoplanet TOI 150.1 (top panel), and the eclipsing binary system TOI 276 (bottom panel)
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 II. Training Data 
@@ -35,16 +43,16 @@ The NN is initially trained using TESS observations of 2 classes:
 
 This list of ojects used were taken from previous works using TESS data. The stellar TIC IDs and parameters are found in their individual text files uploaded here. In order to avoid class imbalances, we used 175 objects for each class.  
 
-The TESS LC observations are found using the LightKurve (LK) search function, which finds each observation from TESS of that object from each sector it was osberved. We found the best sector of TESS observations for each object by a signal-to-noise threshold, normalized the flux, and phase folded the light curve using lcf.fold over the period to find an easily identifiable signal. The observations were cleaned for outlier data points and noisy observations, and were adjusted using a masking routine to clean up data around the signal. Below shows an example of a planetary signal and binary signal post cleaning: 
+The TESS LC observations are found using the LightKurve (LK) search function, which finds each observation from TESS of that object from each sector it was osberved. We found the best sector of TESS observations for each object by a signal-to-noise threshold, normalized the flux, and phase folded the light curve using lcf.fold over the period to find an easily identifiable signal. The observations were cleaned for outlier data points and noisy observations, and were adjusted using a masking routine to clean up data around the signal. Figures 1 and 2 shows examples of a planetary signal and binary signal post cleaning: 
 
 
 ![pl_curve_0](https://github.com/user-attachments/assets/5df38d15-860d-4035-bfaf-05ad848f50b2)
 
-Figure 1: TESS Light curve for TIC ID 7548817 with known planetary signal after data cleaning processing
+Figure 2: TESS Light curve for TIC ID 7548817 with known planetary signal after data cleaning processing
 
 ![eb_curve_116](https://github.com/user-attachments/assets/dec3f821-001f-492c-a57e-6fabadf69593)
 
-Figure 2: TESS Light curve for TIC ID 372909935 with known binary signal after data cleaning processing
+Figure 3: TESS Light curve for TIC ID 372909935 with known binary signal after data cleaning processing
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 II. Neural Network
