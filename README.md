@@ -34,14 +34,14 @@ Light curves are plots describing the flux or brightness of a star over a contin
 Figure 1: TESS Light Curves with a model fit of the confirmed exoplanet TOI 150.1 (top panel), and the eclipsing binary system TOI 276 (bottom panel)
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-II. Training Data 
+II. Training Data and Data Availability 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The NN is initially trained using TESS observations of 2 classes: 
   1. Planetary Signal (Olmschenk et. al 2021)
   2. Binary Signal (Michael)
 
-This list of ojects used were taken from previous works using TESS data. The stellar TIC IDs and parameters are found in their individual text files uploaded here. In order to avoid class imbalances, we used 175 objects for each class.  
+This list of ojects used were taken from previous works using TESS data. The stellar TIC IDs and parameters are found in their individual txt or csv files uploaded here. In order to avoid class imbalances, we used 175 objects for each class.  
 
 The TESS LC observations are found using the LightKurve (LK) search function, which finds each observation from TESS of that object from each sector it was osberved. We found the best sector of TESS observations for each object by a signal-to-noise threshold, normalized the flux, and phase folded the light curve using lcf.fold over the period to find an easily identifiable signal. The observations were cleaned for outlier data points and noisy observations, and were adjusted using a masking routine to clean up data around the signal. Figures 1 and 2 shows examples of a planetary signal and binary signal post cleaning. 
 
