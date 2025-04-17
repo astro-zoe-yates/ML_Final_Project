@@ -9,7 +9,7 @@ Inputs:
 
 Outputs:
   - Classification of object's TESS Light Curve and the likelihood 
-  - MCMC best-fit-parameters for planetary transit
+  - MCMC best-fit-parameters (planet transits only)
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -58,6 +58,11 @@ II. Neural Network
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 In order to train the NN, we used the images of the plotted light curves for each class. We used a 2D Convolusional Neural Network, optimized to handle image files for training. The NN contains 5 layers with the final 
+
+![image](https://github.com/user-attachments/assets/6e8711f5-355d-4599-812b-2ec86b02d4b6)
+
+![image](https://github.com/user-attachments/assets/298bbcf7-bad4-4303-b12f-826544b563c7)
+
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
