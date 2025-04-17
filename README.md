@@ -71,6 +71,16 @@ Figure 5: Confusion matrix for the CNN, displaying the performance accuracy of e
 III. MCMC Fit for Planetary Signals
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+For the planet transit signals that have been classified by the 2D CNN, a secondary notebook was made to fit a planet transit model (BATMAN) to the data using an MCMC (emcee). The output parameters give you the planets radius (in units of stellar radii), the semi-major axis of the orbit (in units of stellar radii), and the point of mid transit, all with uncertainties. The code outputs an image of the flux and model fit (Figure 6) as well as a corner plot of the MCMC run (Figure 7).
+
+![image](https://github.com/user-attachments/assets/44836987-26d3-4fbd-9bf0-345689bb0bc4)
+
+Figure 6: MCMC Fit of planet transit light curve
+
+![image](https://github.com/user-attachments/assets/7b4e1a10-5156-476b-a8df-9eefa7990273)
+
+Figure 7: Corner plot of MCMC fitting
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 II. Running the Code
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
