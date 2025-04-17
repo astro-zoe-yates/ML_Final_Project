@@ -43,7 +43,7 @@ The NN is initially trained using TESS observations of 2 classes:
 
 This list of ojects used were taken from previous works using TESS data. The stellar TIC IDs and parameters are found in their individual text files uploaded here. In order to avoid class imbalances, we used 175 objects for each class.  
 
-The TESS LC observations are found using the LightKurve (LK) search function, which finds each observation from TESS of that object from each sector it was osberved. We found the best sector of TESS observations for each object by a signal-to-noise threshold, normalized the flux, and phase folded the light curve using lcf.fold over the period to find an easily identifiable signal. The observations were cleaned for outlier data points and noisy observations, and were adjusted using a masking routine to clean up data around the signal. Figures 1 and 2 shows examples of a planetary signal and binary signal post cleaning: 
+The TESS LC observations are found using the LightKurve (LK) search function, which finds each observation from TESS of that object from each sector it was osberved. We found the best sector of TESS observations for each object by a signal-to-noise threshold, normalized the flux, and phase folded the light curve using lcf.fold over the period to find an easily identifiable signal. The observations were cleaned for outlier data points and noisy observations, and were adjusted using a masking routine to clean up data around the signal. Figures 1 and 2 shows examples of a planetary signal and binary signal post cleaning. 
 
 ![pl_curve_0](https://github.com/user-attachments/assets/5df38d15-860d-4035-bfaf-05ad848f50b2)
 
@@ -57,13 +57,15 @@ Figure 3: TESS Light curve for TIC ID 372909935 with known binary signal after d
 II. Neural Network
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-In order to train the NN, we used the images of the plotted light curves for each class. We used a 2D Convolusional Neural Network, optimized to handle image files for training. The NN contains 5 layers with the final 
+In order to train the model, we used the images of the plotted light curves for each class. We used a 2D Convolusional Neural Network (CNN), optimized to handle image files for training to attempt to classify LC signals into the two classes: eclipsing binaries and planets.  Our CNN contains three 2D convolusional layers and then two fully connected layers after flattening the images, passing through 26 epochs for accuracy convergence. We use the ReLu activation functions with a final SoftMax activation function due to our binary classification. The model is evaluated based on the accuracy of seperate validation data, to understand the performance of the CNN, and a confusion matrix was produced to examine how the model performed for each class. Figures 4 and 5 show the accuracy curve and the confusion matrix for the CNN. 
 
-![image](https://github.com/user-attachments/assets/6e8711f5-355d-4599-812b-2ec86b02d4b6)
+![image](https://github.com/user-attachments/assets/e255a035-bdba-4d47-b410-ba1f8c720f3d)
 
-![image](https://github.com/user-attachments/assets/298bbcf7-bad4-4303-b12f-826544b563c7)
+Figure 4: Accuracy curve for both the training and validation data over each epoch 
 
+![image](https://github.com/user-attachments/assets/a7971100-2892-4d7a-af8c-e9ea43439798)
 
+Figure 5: Confusion matrix for the CNN, displaying the performance accuracy of each class
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 II. CNN Accuracy
